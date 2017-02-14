@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="lib/template.js"></script>
+    <link rel="stylesheet" href="css/coupon2.css"/>
+    <script src="js/coupon2.js"></script>
+    <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+<!--头部-->
+<div class="all_pag_head clearfix" id="top">
+    <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+    <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+</div>
+<!--搜索-->
+<div class="search">
+    <div class="searchbox clearfix">
+        <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+        <button class="fr">搜索</button>
+    </div>
+</div>
+<section class="message">
+    <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+</section>
+<section class="kfc_bgbox">
+    <ul id="kfc_list">
+    </ul>
+</section>
+<section class="blur_bgbox">
+    <div class="blur_box w">
+        <img src="images/arrow-right.svg" alt="" class="arr_left"/>
+        <img src="images/arrow-right.svg" alt="" class="arr_right"/>
+        <div class="img_box"></div>
+        <i><a href="#">×</a></i>
+    </div>
+</section>
+<!--底部-->
+<div class="all_pag_foot">
+    <div class="foot_top clearfix">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="#top">返回顶部<img src="images/top.png"/></a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+</body>
+<!--模板引擎-->
+<script type=text/html id="cheap2">
+    {{each result as value}}
+    <li class="kfc_box">
+        <a href="javascript:;">
+            <div class="li_box w">
+                <div class="kfx_box_img">
+                    {{#value.couponProductImg}}
+                </div>
+                <div class="kfc_box_details">
+                    <span>{{value.couponProductName}}</span>
+                </div>
+                <div class="kfc_box_price">
+                    <p>{{value.couponProductPrice}}</p>
+                </div>
+                <div class="kfc_box_date">
+                    <p>{{value.couponProductTime}}</p>
+                </div>
+                <img class="img_svg" src="images/arrow-right.svg" alt=""/>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+</html>

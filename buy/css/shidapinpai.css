@@ -1,0 +1,150 @@
+body {
+    background-color: #f1f1f1;
+    font-size: 14px;
+}
+
+/*主体*/
+.layout {
+    background-color: #f1f1f1;
+}
+
+/*三级导航*/
+.sanji {
+    padding: 8px 15px;
+}
+
+.sanji li {
+    float: left;
+}
+
+.sanji li a {
+    color: #000;
+    padding: 0 5px;
+}
+
+/*标题*/
+.layout .title {
+    color: #874604;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*排行榜*/
+.phb {
+
+}
+
+.phb li {
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
+    padding: 10px 50px;
+}
+
+.phb li a {
+    display: block;
+    position: relative;
+}
+
+em {
+    font-style: normal;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    background-color: #c9c9c9;
+}
+
+.phb li:nth-child(1) em {
+    background-color: #f10e0e;
+}
+
+.phb li:nth-child(2) em {
+    background-color: #ff9314;
+}
+
+.phb li:nth-child(3) em {
+    background-color: #8adf5b;
+}
+
+.phb h3 {
+    color: #000;
+    font-size: 14px;
+}
+
+.phb p {
+    color: #999;
+}
+
+/*销量排行*/
+.xlph a {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.xlph img {
+    width: 100px;
+    height: 100px;
+}
+
+.xlph .content {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.xlph .content h3 {
+    color: #000;
+    margin: 10px 0;
+}
+
+.xlph .pri {
+    color: #e92322;
+    margin-bottom: 10px;
+}
+
+.xlph .info {
+    color: #000;
+}
+
+/*最新评论*/
+#zxpl {
+    padding: 0 10px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+#zxpl .top a {
+    display: flex;
+}
+
+#zxpl .top a img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+#zxpl .top a .tit {
+    flex: 1;
+    margin-top: 20px;
+    color: #999;
+}
+
+#zxpl .bottom {
+    border: 1px solid #e7e7e7;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#zxpl .bottom .info {
+    margin-top: 10px;
+}

@@ -1,0 +1,270 @@
+/*头部*/
+.all_pag_head {
+    min-width: 320px;
+    height: 50px;
+    background-color: #FF841D;
+}
+
+.all_pag_head .fl {
+    padding: 12px;
+    padding-left: 17px;
+}
+
+.all_pag_head .fr {
+    padding: 7px;
+}
+
+.all_pag_head .fl img {
+    display: block;
+    max-height: 25px;
+}
+
+.all_pag_head .fr img {
+    display: block;
+    max-height: 34px;
+}
+
+/*搜索部分*/
+.searchbox {
+    margin: 0 auto;
+    padding: 10px;
+    padding-right: 80px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.searchbox input {
+    background-color: #f1f1f1;
+    height: 30px;
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+
+.searchbox button {
+    position: absolute;
+    border-radius: 15px;
+    width: 63px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    background-color: #FF841D;
+    color: #fff;
+}
+
+/*介绍*/
+.intro {
+    padding: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 10px 0;
+    color: #5a5a5a;
+}
+
+.info {
+    color: #999;
+}
+
+.intro_content {
+    margin-top: 20px;
+    position: relative;
+}
+
+.intro_content img {
+    width: 120px;
+    height: 120px;
+    float: right;
+}
+
+.intro_content p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #606060;
+    margin-top: 10px;
+}
+
+.city {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+#disstorck {
+    width: 130px;
+    margin: 0 auto;
+    box-shadow: 1px 3px 10px #ccc;
+    padding: 0 10px;
+    padding-bottom: 20px;
+}
+
+#disstorck li {
+    border-bottom: 1px dotted #ccc;
+    line-height: 20px;
+    height: 20px;
+}
+
+#disstorck li a {
+    display: block;
+    padding: 0 10px;
+}
+
+#disstorck li a strong {
+    float: right;
+    color: #f27b04;
+    font-weight: normal;
+}
+
+.gobuy {
+    display: block;
+    margin: 20px 10px;
+    background-color: #ff9000;
+    color: #fff;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*二维码*/
+.qrcode {
+    background-color: #f4f4f4;
+    padding: 20px 10px;
+}
+
+.qrcode img {
+    width: 100%;
+}
+
+/*评论区*/
+.tit {
+    font-size: 16px;
+    padding: 6px 8px;
+}
+
+.reply {
+    padding: 6px 8px;
+}
+
+.reply .form {
+    border: 2px solid #eceae8;
+    border-radius: 2px;
+    padding: 4px 0 0 4px;
+    background-color: #fff;
+    position: relative;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.reply .form textarea {
+    width: 100%;
+    height: 68px;
+}
+
+.ctrl {
+    border-top: 1px solid #eceae8;
+    height: 36px;
+    margin-left: -4px;
+    position: relative;
+}
+
+.ctrl input {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    height: 36px;
+    background-color: #ff9000;
+    color: #fff;
+    padding: 0 20px;
+    font-family: 'microsoft yahei';
+}
+
+.list li {
+    padding: 18px 10px;
+}
+
+.list .userimg {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.list .userimg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.con {
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.con .name {
+    margin-bottom: 8px;
+}
+
+.con .username {
+    float: left;
+    color: #5997c0;
+    font-size: 13px !important;
+}
+
+.con .time {
+    float: right;
+    color: #999;
+    font-size: 13px !important;
+}
+
+.con .content {
+    font-size: 15px !important;
+    color: #606060;
+    line-height: 20px;
+}
+
+/*底部*/
+.all_pag_foot {
+    background-color: #efefef;
+    color: #666;
+}
+
+.all_pag_foot .foot_top {
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 10px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.all_pag_foot .foot_top a {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.foot_top a:nth-child(2) {
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+
+.foot_top a:nth-child(3) img {
+    vertical-align: middle;
+    width: 15px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+.foot_bottom {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.foot_bottom p a:nth-child(1) {
+    color: red;
+}
+
+.toggleblock {
+    display: table !important;
+}

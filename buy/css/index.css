@@ -1,0 +1,141 @@
+body {
+  background-color: #f1f1f1;
+}
+.sort {
+  margin-top: 10px;
+  width: 100%;
+  background-color: white;
+}
+.sort .sort_ul {
+  transition: all 0.5s;
+  overflow: hidden;
+  height: 190px;
+}
+.sort .sort_ul .sort_li {
+  transition: all 1s;
+  width: 25%;
+  padding: 11px;
+  float: left;
+  text-align: center;
+}
+.sort .sort_ul .sort_li img {
+  width: 50px;
+  height: 50px;
+}
+.warea {
+  margin-top: 5px;
+  width: 100%;
+}
+.warea .warea_top {
+  padding-left: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  line-height: 35px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+}
+.warea .warea_top img {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.warea .warea_ul {
+  overflow: hidden;
+}
+.warea .warea_ul .warea_li {
+  position: relative;
+  background-color: white;
+  float: left;
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid #ccc;
+}
+.warea .warea_ul .warea_li .warea_left {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 110px;
+}
+.warea .warea_ul .warea_li .warea_left img {
+  width: 100px;
+  height: 100px;
+}
+.warea .warea_ul .warea_li .warea_right {
+  position: absolute;
+  top: 0px;
+  margin-top: 10px;
+  width: 100%;
+  height: 130px;
+  padding-right: 10px;
+  padding-left: 120px;
+  float: left;
+}
+.warea .warea_ul .warea_li .warea_right .warea_detail {
+  max-height: 57px;
+  font-size: 15px;
+}
+.warea .warea_ul .warea_li .warea_right .warea_detail span {
+  color: #ff6c00;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop {
+  margin-top: 30px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop .shop {
+  height: 20px;
+  color: #a1a1a1;
+  font-size: 12px;
+  float: left;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop .date {
+  color: #a1a1a1;
+  font-size: 12px;
+  float: left;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop .shop_say {
+  position: relative;
+  width: 90px;
+  height: 25px;
+  float: right;
+  overflow: hidden;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop .shop_say i {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="17"><path fill="%23a1a1a1" d="M924.505 147.101H97.82c-17.558 0-31.795 14.242-31.795 31.795V687.63c0 17.558 14.238 31.792 31.795 31.792h241.198l149.665 149.662c6.21 6.212 14.343 9.316 22.479 9.316s16.27-3.103 22.48-9.316l149.665-149.66h241.198c17.558 0 31.795-14.236 31.795-31.793V178.897c0-17.554-14.238-31.796-31.795-31.796zm-31.796 508.73h-222.57a31.797 31.797 0 0 0-22.478 9.316l-136.5 136.495-136.498-136.495a31.801 31.801 0 0 0-22.48-9.316H129.614V210.696h763.094V655.83zM225 433.265a63.591 63.591 0 1 0 127.183 0 63.591 63.591 0 1 0-127.183 0zM447.571 433.265a63.591 63.591 0 1 0 127.182 0 63.591 63.591 0 1 0-127.182 0zM670.14 433.265a63.591 63.591 0 1 0 127.182 0 63.591 63.591 0 1 0-127.182 0z"/></svg>');
+  width: 14px;
+  height: 15px;
+  display: inline-block;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.warea .warea_ul .warea_li .warea_right .warea_shop .shop_say span {
+  float: right;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.more_warea {
+  background-color: white;
+  width: 100%;
+  height: 42px;
+}
+.more_warea .more_box {
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  height: 32px;
+  background-color: #f4f4f4;
+  background-image: linear-gradient(#fff, #f4f4f4);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 32px;
+}

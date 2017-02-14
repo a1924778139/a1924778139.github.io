@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script src="js/cheap.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/bijia.css"/>
+    <script src="lib/template.js"></script>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="js/bijia.js"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="bgbox">
+        <!--头部-->
+        <div class="all_pag_head clearfix" id="top">
+            <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+            <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+        </div>
+        <!--搜索-->
+        <div class="search">
+            <div class="searchbox clearfix">
+                <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+                <button class="fr">搜索</button>
+            </div>
+        </div>
+        <!--头部筛选-->
+        <section class="top_nav">
+            <div class="top_nav_left">
+            <span>
+                <a href="index.html">
+                    首页>
+                </a>
+            </span>
+            <span>
+                <a href="#" class="lei">
+
+                </a>
+            </span>
+                <span class="name"></span>
+            </div>
+            <div class="top_nav_right">
+                <div class="top_nav_right_btn">
+                    <a href="#">筛选</a>
+                </div>
+            </div>
+        </section>
+        <!--产品图片展示-->
+        <section class="product_img">
+
+        </section>
+        <div class="shop_says">
+            <ul>
+                <li>比价购买</li>
+                <li>产品参数</li>
+                <li>评价(2322)</li>
+            </ul>
+        </div>
+        <div class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+        <!--网友评价-->
+        <div class="valuation">
+            <div class="valuation_top">
+                网友评价
+            </div>
+            <div class="valuation_detail">
+                <ul class="valuation_ul">
+                    <!--<li class="valuation_li">-->
+                        <!--<div class="valuation_name_date">-->
+                            <!--<span class="valuation_name">brrr</span>-->
+                            <!--<span class="valuation_date">2016/10/1</span>-->
+                        <!--</div>-->
+                        <!--<div class="valuation_shop">-->
+                            <!--<span>购买京东</span>-->
+                        <!--</div>-->
+                        <!--<div class="says">-->
+                            <!--<p>使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="all_pag_foot">
+            <div class="foot_top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="#top">返回顶部<img src="images/top.png"/></a>
+            </div>
+            <div class="foot_bottom">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/html" id="shop_img">
+    {{each result as value}}
+    <div class="shop_box">
+        <p>{{value.productName}}</p>
+        {{#value.productImg}}
+        <img class="sc" src="http://www.zuyushop.com/wap/images/sc.jpg" alt="" class="sc"/>
+    </div>
+    <a href="#" class="shop_a">
+        {{#value.bjShop}}
+    </a>
+    {{/each}}
+</script>
+<script type="text/html" id="valuation_li">
+    {{each result as value}}
+    <li class="valuation_li">
+        <div class="valuation_name_date">
+            <span class="valuation_name">{{value.comName}}</span>
+            <span class="valuation_date">{{value.comTime}}</span>
+        </div>
+        <div class="valuation_shop">
+            <span>{{value.comFrom}}</span>
+        </div>
+        <div class="says">
+            <p>{{value.comContent}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>

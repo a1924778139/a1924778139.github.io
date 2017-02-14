@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>商品详情</title>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/shidapinpai.css"/>
+    <!--排行-->
+    <script type="text/html" id="phbatr">
+        {{if result}}
+        {{each result as v i}}
+        <li>
+            <a href="#">
+                <em>{{++i}}</em>
+
+                <h3>{{v.brandName}}</h3>
+
+                <p>{{v.brandInfo}}</p>
+            </a>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <!--销量排行-->
+    <script type="text/html" id="xlatr">
+        {{if result}}
+        {{each result as v i}}
+        <li>
+            <a href="#">
+                {{#v.productImg}}
+
+                <div class="content">
+                    <h3>{{v.productName}}</h3>
+
+                    <p class="pri">{{v.productPrice}}</p>
+
+                    <p class="info"><span>{{v.productQuote}}</span><span>{{v.productCom}}</span></p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+    <!--最新评论-->
+    <script type="text/html" id="zxplatr">
+        {{if result}}
+        {{each result as v i}}
+        <li>
+            <div class="top">
+                <a href="#">
+                    <img src="" alt=""/>
+
+                    <p class="tit">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                </a>
+            </div>
+            <div class="bottom">
+                <p class="clearfix"><span>{{v.comName}}</span><span class="fr">{{v.comTime}}</span></p>
+
+                <p class="info">{{v.comContent}}</p>
+            </div>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+</head>
+<body>
+<!--头部-->
+<div class="all_pag_head clearfix">
+    <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+    <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+</div>
+<!--搜索-->
+<div class="search">
+    <div class="searchbox clearfix">
+        <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+        <button class="fr">搜索</button>
+    </div>
+</div>
+<!--主体-->
+<div class="layout">
+    <!--三级-->
+    <div class="sanji">
+        <ul class="clearfix">
+            <li><a href="index.html">首页&gt;</a></li>
+            <li><a href="brandTitle.html">全部品牌&gt;</a></li>
+            <li><a href="javascript:;">品牌大全&gt;</a></li>
+        </ul>
+    </div>
+    <!--标题-->
+    <div class="title">这里需要动态生成</div>
+    <!--排行榜-->
+    <ul class="phb" id="phb">
+        <!--加载时的旋转代码开始-->
+        <div class="aobo">
+            <div class="zyc">
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+            </div>
+        </div>
+        <!--加载时的旋转代码结束-->
+    </ul>
+    <!--标题-->
+    <div class="title">这里需要动态生成</div>
+    <!--销量排行-->
+    <ul class="xlph" id="xlph">
+        <!--加载时的旋转代码开始-->
+        <div class="aobo">
+            <div class="zyc">
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+            </div>
+        </div>
+        <!--加载时的旋转代码结束-->
+    </ul>
+    <!--标题-->
+    <div class="title">这里需要动态生成</div>
+    <!--最新评论-->
+    <ul id="zxpl">
+        <!--加载时的旋转代码开始-->
+        <div class="aobo">
+            <div class="zyc">
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+            </div>
+        </div>
+        <!--加载时的旋转代码结束-->
+    </ul>
+</div>
+<!--底部-->
+<div class="all_pag_foot">
+    <div class="foot_top clearfix">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">返回顶部<img src="images/top.png"/></a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+</body>
+<script src="./lib/zepto-docs.js"></script>
+<script src="./lib/template.js"></script>
+<script src="./js/shidapinpai.js"></script>
+</html>

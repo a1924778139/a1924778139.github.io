@@ -1,0 +1,132 @@
+.top_nav {
+  font-size: 14px;
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.top_nav .top_nav_left {
+  height: 100%;
+  padding-left: 10px;
+  float: left;
+  line-height: 36px;
+  width: 60%;
+}
+.top_nav .top_nav_right {
+  float: right;
+  overflow: hidden;
+  width: 30%;
+  padding-right: 10px;
+  height: 100%;
+}
+.top_nav .top_nav_right .top_nav_right_btn {
+  float: right;
+  width: 54px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 30px;
+  background-color: white;
+  margin-top: 3px;
+}
+.shop_title {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.shop_title .shop_title_li {
+  position: relative;
+  width: 100%;
+  height: 136px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+.shop_title .shop_title_li .shop_left {
+  width: 120px;
+  padding-top: 10px;
+}
+.shop_title .shop_title_li .shop_left img {
+  width: 100px;
+  height: 100px;
+}
+.shop_title .shop_title_li .shop_right {
+  width: 100%;
+  padding-left: 130px;
+  max-height: 50px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 14px;
+}
+.shop_title .shop_title_li .shop_right .shop_price {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ea3900;
+  width: 100%;
+}
+.shop_title .shop_title_li .shop_right .shop_want {
+  display: inline-block;
+  margin-top: 10px;
+  color: #a1a1a1;
+  font-size: 12px;
+  margin-left: 3px;
+}
+.shop_title .shop_title_li .shop_right .shop_ask {
+  display: inline-block;
+  margin-left: 20px;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.choose_page {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  line-height: 34px;
+}
+.choose_page ul {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.choose_page ul li {
+  overflow: hidden;
+  width: 33%;
+  float: left;
+  position: relative;
+}
+.choose_page ul li .sjx {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+}
+.choose_page ul .add_page {
+  width: 68px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #ccc;
+  float: left;
+  margin-left: 30px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.choose_page ul .page {
+  width: 100px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #ccc;
+  float: left;
+  margin-right: 10px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 33;
+}
+.choose_page ul .del_page {
+  width: 68px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #ccc;
+  float: left;
+  border-radius: 3px;
+}

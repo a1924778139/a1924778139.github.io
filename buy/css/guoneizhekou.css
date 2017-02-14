@@ -1,0 +1,53 @@
+/*商品列表*/
+.pro_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pro_list li {
+    width: 50%;
+    padding: 10px 0 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pro_list li:nth-child(2n+1) {
+    border-right: 1px solid #ccc;
+}
+
+.pro_list li a {
+    display: block;
+    text-align: center;
+}
+
+.pro_list img {
+    width: 140px;
+    height: 140px;
+}
+
+.pro_list p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.pro_list p:nth-child(2) {
+    color: #333;
+    height: 36px;
+    line-height: 18px;
+    padding: 0 8px;
+
+    display: -webkit-box; /*必须结合的属性，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-line-clamp: 2; /*用来限制在一个块元素显示的文本的行数*/
+    -webkit-box-orient: vertical; /*必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式*/
+    overflow: hidden;
+}
+
+.pro_list p:nth-child(3) {
+    padding: 0 8px;
+    color: #ff6c00;
+}
+
+.pro_list p:nth-child(4) {
+    font-size: 8px;
+    color: #a1a1a1;
+    padding: 6px 8px;
+}

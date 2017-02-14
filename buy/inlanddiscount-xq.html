@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>productdetail</title>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/productdetail.css"/>
+</head>
+<body>
+<script src='lib/template.js'></script>
+<script type='text/html' id='tmp'>
+    {{if result}}
+    {{each result as value i}}
+    <!--介绍-->
+    <div class="intro">
+        <h1 class="title">{{value.productName}}</h1>
+
+        <p class="info"><span>{{value.productFrom}}</span>&nbsp;<span>{{value.productTime}}</span>&nbsp;<span>{{value.productTips}}</span>
+        </p>
+
+        <div class="intro_content clearfix">
+            {{#value.productImg}}
+
+            <p>{{value.productInfo}}</p>
+        </div>
+
+        <a href="javascript:;" class="gobuy">前往购买</a>
+    </div>
+    <!--二维码-->
+    <div class="qrcode">
+        <img src="images/mmbweixin2.png"/>
+    </div>
+    <!--评论区-->
+    <div class="comment">
+        {{#value.productComment}}
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<div class="detail_layout">
+    <!--头部-->
+    <div class="all_pag_head clearfix">
+        <a name='top'></a>
+        <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+        <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+    </div>
+    <!--搜索-->
+    <div class="search">
+        <div class="searchbox clearfix">
+            <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+            <button class="fr">搜索</button>
+        </div>
+    </div>
+    <!--商品详情-->
+    <div id="intro_box"></div>
+    <!--底部-->
+    <div class="all_pag_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="#top" name='top'><img src="images/top.png"/>返回顶部</a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</div>
+<script src="lib/zepto-docs.js"></script>
+<script src='js/gnzk-xq.js'></script>
+</body>
+</html>

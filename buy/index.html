@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="lib/template.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/cheap.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div class="bgbox">
+    <!--头部-->
+    <div class="all_pag_head clearfix" id="top">
+        <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+        <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+    </div>
+    <!--搜索-->
+    <div class="search">
+        <div class="searchbox clearfix">
+            <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+            <button class="fr">搜索</button>
+        </div>
+    </div>
+    <!--跳转图标-->
+    <section class="sort">
+        <ul class="sort_ul">
+
+        </ul>
+    </section>
+    <section class="warea">
+        <div class="warea_top">
+            <span>超值折扣推荐</span>
+            <img src="http://www.zuyushop.com/wap/images/more.png" alt=""/>
+        </div>
+        <ul class="warea_ul">
+
+        </ul>
+    </section>
+    <!--更多推荐-->
+    <div class="more_warea">
+        <div class="more_box">
+            <a href="moneyctrl.html">
+                更多优惠信息>>
+            </a>
+        </div>
+    </div>
+    <!--品牌排行-->
+    <section class="warea">
+        <div class="warea_top">
+            <span>品牌排行</span>
+            <img src="http://www.zuyushop.com/wap/images/more.png" alt=""/>
+        </div>
+    </section>
+    <!--底部-->
+    <div class="all_pag_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="#top">返回顶部<img src="images/top.png"/></a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/html" id="sort_li">
+    {{each result as value}}
+    <li class="sort_li">
+        <a href={{value.titlehref}}>
+            {{#value.img}}
+            <p>{{value.name}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="warea_li">
+    {{each result as value}}
+    <li class="warea_li">
+        <div class="warea_left">
+            {{#value.productImgSm}}
+        </div>
+        <div class="warea_right">
+            <p class="warea_detail">
+                {{value.productName}}
+                <span>{{value.productPinkage}}</span>
+            </p>
+            <div class="warea_shop">
+                <p class="shop">{{value.productFrom}} &nbsp|&nbsp&nbsp</p>
+                <p class="date"> {{value.productTime}}</p>
+                <div class="shop_say">
+                    <i></i>
+                    <span class="says">111</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>

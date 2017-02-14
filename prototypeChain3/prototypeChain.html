@@ -1,0 +1,310 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:prototypeChain</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">原型链</h1>
+<h2 id="-">什么是原型链?</h2>
+<blockquote>
+<p>因为原型对象也是一个对象,只要是对象就会存在自己的原型对象,所以原型对象也有自己的原型对象,通过这样一级一级查找出的原型,就叫做对象的原型链</p>
+</blockquote>
+<pre><code>function Person () {}
+// 一旦定义了函数, 那么就有两个部分: 构造函数, &quot;神秘&quot;对象Person.prototype
+
+// 实例对象p
+var p = new Person();
+
+// 原型链:p --&gt; Person.prototype( p.__proto__ ) --&gt; Object.prototype --&gt; null
+</code></pre><blockquote>
+<p><code>Person.prototype</code> 是 实例 p 的原型对象, 使用 <code>__proto__</code>可以访问对象的原型对象
+<code>Person.prototype</code> 的 原型对象是 <code>Person.prototype.__proto__</code>
+<code>Person.prototype.__proto__</code> 里的 <code>constructor</code> 是 <code>Object</code>. 所以<code>Person.prototype.__proto__</code> 就是 <code>Object.prototype</code>
+<code>Object.prototype.__proto__</code> 是 null. 因此表明 <code>Object.prototype</code> 就是顶级.</p>
+</blockquote>
+<h2 id="-">对象的原型链</h2>
+<h3 id="-">普通实例对象的原型链结构图</h3>
+<p><img src="media/14817076671382/14817900115759.jpg" alt=""></p>
+<h3 id="-">内置对象的原型链</h3>
+<pre><code>// 数组
+[] --&gt; Array.prototype --&gt; Object.prototype --&gt; null
+// 正则
+/./ --&gt; RegExp.prototype --&gt; Object.prototype --&gt; null
+// 时间
+new Date() --&gt; Date.prototype --&gt; Object.prototype --&gt; null
+// 对象
+{} --&gt; Object.prototype --&gt; null
+</code></pre><p><img src="media/14817076671382/14817903547488.jpg" alt=""></p>
+<h3 id="-">原型链结构练习</h3>
+<pre><code>// 根据这段代码画出stu的原型链结构图
+function Person( name, age, gender ) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+function Student () {}
+
+Student.prototype = new Person( &#39;张三&#39;, 19, &#39;男&#39; );
+
+var stu = new Student();
+</code></pre><p><img src="media/14817076671382/14817905284970.jpg" alt=""></p>
+<pre><code>// 画出p1 p2的原型链结构
+function Person() {}
+var p1 = new Person();
+var p2 = new Person();
+</code></pre><p><img src="media/14817076671382/14817906697836.jpg" alt=""></p>
+<h2 id="function-">Function与动态函数</h2>
+<h3 id="-">动态函数</h3>
+<blockquote>
+<p>动态函数就是在运行的过程中, 将一段字符串作为代码运行.由于字符串可以随意的拼接. 因此得到动态的执行.</p>
+</blockquote>
+<h4 id="-">创建动态函数</h4>
+<ul>
+<li><p>语法</p>
+<pre><code>  new Function(arg0,arg1,...argN,functionBody);
+
+  // Function的所有参数中,除了最后一个以外,都是生成的函数的参数,最后一个是生成函数的函数体
+</code></pre></li>
+<li><p>案例</p>
+<pre><code>  // 案例1: 求两个数字的和
+  // 传统做法
+  function getSum ( num1, num2 ) {
+      return num1 + num2;
+  }
+
+  // 动态函数
+  var getSum2 = new Function ( &#39;num1&#39;, &#39;num2&#39;, &#39;return num1 + num2;&#39; );
+
+  console.log(getSum2( 123, 456 ));
+</code></pre></li>
+</ul>
+<h3 id="-">函数的相关参数</h3>
+<h4 id="arguments">arguments</h4>
+<blockquote>
+<p>凡是函数调用, 都会默认含有一个 <code>arguments</code> 对象. 可以将其看做为 &quot;数组&quot;. 里面存储着调用时传入的所有参数. 可以使用数组的索引访问这些参数.</p>
+</blockquote>
+<pre><code>// 求和
+function sum () {
+    // 所有的参数都会存储到 arguments 中
+    var sum = 0;
+    for ( var i = 0; i &lt; arguments.length; i++ ) {
+        sum += arguments[ i ];
+    }
+    return sum;
+}
+console.log( sum( 1, 4, 2, 7, 5, 9 ) );
+</code></pre><ul>
+<li><p>改写extend函数</p>
+<pre><code>  // 混入式继承
+  function extend() {
+      var args = arguments;
+      if ( args.length == 1 ) {                  // 混入到 this 中
+          for ( var k in args[ 0 ] ) {
+              this[ k ] = args[ 0 ][ k ];
+          }
+      } else {                                    // 混入到 argu...[ 0 ] 中
+          for ( var k in args[ 1 ] ) {
+              args[ 0 ][ k ] = args[ 1 ][ k ];
+          }
+      }
+  }
+</code></pre></li>
+</ul>
+<h4 id="length">length</h4>
+<blockquote>
+<p>定义函数时形参的个数,通过函数名.length访问</p>
+</blockquote>
+<h4 id="name">name</h4>
+<blockquote>
+<p>函数名,通过函数名.name访问</p>
+</blockquote>
+<p><img src="media/14817076671382/14817931962812.jpg" alt=""></p>
+<h3 id="-">函数的引用</h3>
+<blockquote>
+<p>js中的函数也是一个对象
+<code>callee</code> 在函数内部,表示当前函数的引用
+<code>caller</code> 表示调用函数的函数</p>
+</blockquote>
+<h4 id="callee-">callee:当前函数的引用</h4>
+<pre><code>// 1. callee
+// 语法: arguments.callee
+//    当前函数的引用
+/*
+function foo () {
+
+    console.log( arguments.callee === foo );
+}
+
+foo();
+// 一般在函数内部, 实现函数递归的时候, 我们一般使用 callee 表示函数的引用
+
+// 传统的递归方法
+function fn () {
+    fn(); // 自己调用自己
+}
+fn();
+
+// 新的方法
+function fn() {
+    arguments.callee();  // 使用 callee 来递归
+}
+fn();
+*/
+</code></pre><h4 id="caller-">caller:调用该方法的函数 的 调用函数</h4>
+<pre><code>// 2. caller 表示调用函数
+// 语法: 函数名.caller
+function f2 () {
+    console.log( f2.caller );
+}
+
+function itcast() {
+    f2();
+}
+
+itcast();
+</code></pre><p><img src="media/14817076671382/14817938050405.jpg" alt=""></p>
+<h3 id="evel-">evel函数</h3>
+<blockquote>
+<p>直接将字符串当做代码执行
+通过<code>evel</code>函数执行的代码中的变量会和当前代码处于同一作用域,<strong>谨慎使用</strong></p>
+</blockquote>
+<pre><code>eval( &#39;var num = 123;&#39; );
+eval( &#39;console.log( num );&#39;);
+</code></pre><p><img src="media/14817076671382/14817940362735.jpg" alt=""></p>
+<h3 id="json-">json字符串转换为对象</h3>
+<pre><code>// 1. eval 做法
+var o1 = eval( &quot;(&quot; + data + &quot;)&quot; );   // 注意一个习惯. 就是数据两端一般加上圆括号为好
+
+// 2. Function 做法
+var o2 = (new Function( &#39;return &#39; + data ))();
+
+// 3. 使用 ES5 中引入的标准处理 JSON 的语法
+// JSON.parse(  )
+// 注意: 字符串必须是严格是 json 格式
+var o3 = JSON.parse( data );
+</code></pre><p><img src="media/14817076671382/14817951724457.jpg" alt=""></p>
+<h2 id="-">函数的原型链</h2>
+<h3 id="-function-">函数是Function的实例</h3>
+<blockquote>
+<p>函数也是一个对象,<code>Function</code>是函数的构造函数</p>
+</blockquote>
+<p><img src="media/14817076671382/14817959890860.jpg" alt=""></p>
+<h3 id="function-function-">Function是Function自己的实例</h3>
+<blockquote>
+<p>Function本身就是一个函数,而函数是Function的实例,所以说Function是Function自己的实例</p>
+</blockquote>
+<p><img src="media/14817076671382/14818118028941.jpg" alt=""></p>
+<h3 id="-">函数的原型链</h3>
+<p><img src="media/14817076671382/14818123096903.jpg" alt=""></p>
+<h3 id="-">函数和对象完整原型链</h3>
+<p><img src="media/14817076671382/14818122301204.jpg" alt=""></p>
+<h2 id="instanceof-">instanceof语法</h2>
+<blockquote>
+<p><del>判断该对象是否为 构造函数 的 实例</del></p>
+<p><strong>判断 构造函数的 原型属性 是否在对象的原型链上</strong></p>
+</blockquote>
+<pre><code>function Person () {}
+
+var p1 = new Person();
+// 按照原有的原型结构来创建
+// p1 -&gt; 原来的 Person.prototype -&gt; Object.prototype -&gt; null
+
+// 设置原型
+Person.prototype = {};
+
+console.log( p1 instanceof Person );   // 判断 {} 是否在 p1 的原型链上
+</code></pre><p><img src="media/14817076671382/14818129038682.jpg" alt=""></p>
+<pre><code>function Person () {}
+
+// 设置原型
+Person.prototype = {};
+
+var p1 = new Person();
+// 按照现在的原型链创建
+// p1 -&gt; 新的 Person.prototype. 即 {} -&gt; Object.prototype -&gt; null
+
+console.log( p1 instanceof Person );   //判断 {} 是否在 p1 的原型链上
+</code></pre><p><img src="media/14817076671382/14818130714254.jpg" alt=""></p>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>

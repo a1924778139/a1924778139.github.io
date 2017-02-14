@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="lib/template.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+    <script src="js/gsproduct.js"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div class="bgbox">
+    <header class="header">
+        <div class="back">
+            <a href="./index.html">
+                <img  src="images/arrow-right.svg" class="back_index">
+            </a>
+        </div>
+        <h1>凑单品</h1>
+        <div class="appdown">
+            <a href="#">
+                <img src="images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </header>
+    <section class="shop_area">
+        <!--控制器-->
+        <ul class="shop_ul">
+            <li class="shop_li" id="shop"><span data-id="0">京东</span>▼</li>
+            <li class="shop_li" id="area"><span data-id="0">华北</span>▼</li>
+            <li class="shop_li">1元▼</li>
+        </ul>
+        <i class="icon"></i>
+        <!--shop选择-->
+        <ul class="shop_detail_ul">
+        </ul>
+        <!--区域选择-->
+        <ul class="area_detail_ul">
+        </ul>
+    </section>
+    <section class="shop_box">
+        <ul class="shop_box_ul">
+
+        </ul>
+    </section>
+    <!--底部-->
+    <div class="all_pag_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="#top">返回顶部<img src="images/top.png"/></a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<!--店铺模板-->
+<script type="text/html" id="shop_mesg">
+    {{each result as value}}
+        <li class="shop_detail_li" id={{value.shopId}}>{{value.shopName}}</li>
+    {{/each}}
+</script>
+<!--区域模板-->
+<script type="text/html" id="area_mesg">
+    {{each result as value}}
+    <li class="area_detail_li" id={{value.areaId}} >{{value.areaName}}</li>
+    {{/each}}
+</script>
+<script type="text/html" id="wares_details">
+    {{each result as value}}
+    <li>
+        <a href="#">
+        <div class="img_box">
+            <img src={{value.productImg}} alt=""/>
+        </div>
+        <p class="shop_box_wares">{{value.productName}}</p>
+        <p class="shop_box_price">{{value.productPrice}}</p>
+        <div class="shop_box_btn">
+            去凑单
+        </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

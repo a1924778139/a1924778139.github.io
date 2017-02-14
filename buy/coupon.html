@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/coupon.css"/>
+    <script src="lib/template.js"></script>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="js/cheap.js"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="bgbox">
+        <!--头部-->
+        <div class="all_pag_head clearfix" id="top">
+            <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+            <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+        </div>
+        <!--搜索-->
+        <div class="search">
+            <div class="searchbox clearfix">
+                <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+                <button class="fr">搜索</button>
+            </div>
+        </div>
+        <section class="shop_area">
+            <section class="top">
+                <div class="nav w">
+                    <div class="top_font">
+                        <span> <a href="#">首页</a></span>
+                        <span>></span>
+                        <span>优惠券</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+            <section class="body" id="cheap_body">
+
+            </section>
+        <!--底部-->
+        <div class="all_pag_foot">
+            <div class="foot_top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="#top">返回顶部<img src="images/top.png"/></a>
+            </div>
+            <div class="foot_bottom">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script id="cheap" type="text/html">
+    <ul class="w clearfix">
+        {{each result as value }}
+        <li id={{value.couponId}} class="cheap_li">
+                <img src={{value.couponImg}}>
+                <p>
+                    {{value.couponTitle}}
+                </p>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script>
+    ajax('http://mmb.ittun.com/api/getcoupon',function href(data){
+        var html=template("cheap",data)
+        $("#cheap_body").html(html)
+        $("li").on("click",function() {
+            var id = $(this)[0].id;
+            window.location.href = "./coupon2.html?" + id;
+        })
+    })
+</script>

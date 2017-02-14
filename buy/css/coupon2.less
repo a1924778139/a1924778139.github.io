@@ -1,0 +1,148 @@
+.message{
+
+  width: 100%;
+  margin: 8px 0;
+  background-color: #f2f2f2;
+  p{
+    width: 100%;
+    display: inline-block;
+    padding: 3px 0px;
+    text-align: center;
+    line-height: 20px;
+
+  }
+}
+.kfc_bgbox{
+  //background-color: yellow;
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+  .kfc_box{
+    height: 160px;
+    border-bottom: 1px solid #ccc;
+    a{
+      padding-left: 10px;
+      text-decoration: none;
+      color: #333;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    .li_box{
+      overflow: hidden;
+      padding-top: 5px;
+      position: relative;
+    }
+  .kfx_box_img{
+    max-width: 100px;
+    width: 100px;
+    float: left;
+    img{
+      max-width: 100px;
+      //width: 50%;
+      height: auto;
+      float: left;
+      background-color: pink;
+    }
+  }
+    .kfc_box_details{
+      margin-left: 10px;
+      float: left;
+      width: 60%;
+      //height: 100px;
+      span{
+        text-align: justify;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .kfc_box_price{
+      //margin-top: 10px;
+      float: left;
+      margin-left: 100px;
+      width: 100%;
+      p{
+        font-size: 30px;
+      }
+    }
+    .kfc_box_date{
+      float: left;
+      //margin-top: 10px;
+      margin-left: 114px;
+      P{
+        color: #e70;
+        font-size: 12px;
+      }
+    }
+    .img_svg{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      margin-top: -15px;
+    }
+  }
+}
+body{
+  position: relative;
+}
+.blur_bgbox{
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(0,0,0,.2);
+  .blur_box{
+    height: 250px;
+    margin-top: 100px;
+    background-color: rgba(0,0,0,.5);
+    position: relative;
+    .arr_left,
+    .arr_right
+    {
+      width: 100px;
+      height: 60px;
+      position: absolute;
+      margin-top: -10px;
+    }
+
+    .arr_right{
+      right: 0;
+      top:40%
+    }
+    .arr_left{
+      left: 0;
+      top:40%;
+      transform: rotate(180deg);
+    }
+    .img_box{
+      width: 70%;
+      height: 70%;
+      position: absolute;
+      left: 15%;
+      top: 15%;
+      text-align: center;
+      img{
+        width: 100px;;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+    i a{
+      width: 5px;
+      height: 5px;
+      font-size: 40px;
+      position: absolute;
+      right: 20px;
+      top: -14px;
+      color: red;
+    }
+  }
+}

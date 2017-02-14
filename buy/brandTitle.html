@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>品牌大全</title>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/pinpaidaquan.css"/>
+</head>
+<script type="text/html" id="listtitle">
+    {{if result}}
+    {{each result as v i}}
+    <li>
+        <div><a href="javascript:;" data-id="{{v.brandTitleId}}">{{v.brandTitle}}</a></div>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+<body>
+<!--头部-->
+<div class="all_pag_head clearfix">
+    <a class="fl" href="index.html"><img src="images/header_logo.png" alt="慢慢买官方网站"/></a>
+    <a class="fr" href="javascript:;"><img src="images/header_app.png" alt="慢慢买app下载"/></a>
+</div>
+<!--搜索-->
+<div class="search">
+    <div class="searchbox clearfix">
+        <input class="fl" type="search" placeholder="请输入你想比价的商品"/>
+        <button class="fr">搜索</button>
+    </div>
+</div>
+<!--主体-->
+<div class="layout">
+    <!--三级-->
+    <div class="sanji">
+        <ul class="clearfix">
+            <li><a href="index.html">首页&gt;</a></li>
+            <li><a href="javascript:;">全部品牌&gt;</a></li>
+            <li><a href="javascript:;">品牌大全&gt;</a></li>
+        </ul>
+    </div>
+    <!--标题-->
+    <div class="title">热门品牌排行</div>
+    <!--所有品牌-->
+    <ul id="list_group">
+        <!--加载时的旋转代码开始-->
+        <div class="aobo">
+            <div class="zyc">
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+                <div class="xuanzhuan-dot"></div>
+            </div>
+        </div>
+        <!--加载时的旋转代码结束-->
+    </ul>
+</div>
+<!--底部-->
+<div class="all_pag_foot">
+    <div class="foot_top clearfix">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">返回顶部<img src="images/top.png"/></a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+</body>
+<script src="./lib/template.js"></script>
+<script src="./lib/zepto-docs.js"></script>
+<script src="./js/pinpaidaquan.js"></script>
+</html>

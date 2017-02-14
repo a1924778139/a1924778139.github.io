@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="lib/zepto-docs.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="lib/swipe.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/baicaijia.css"/>
+    <script src="js/baicaijia.js"></script>
+</head>
+<body>
+    <div class="bgbox">
+        <!--头部-->
+        <header class="header">
+            <div class="back">
+                <a href="./index.html">
+                    <img  src="images/arrow-right.svg" class="back_index">
+                </a>
+            </div>
+            <h1>白菜价-淘宝内部卷</h1>
+            <div class="appdown">
+                <a href="#">
+                    <img src="images/header_app.png" alt=""/>
+                </a>
+            </div>
+        </header>
+        <!--tab-->
+        <section class="tab_box">
+            <ul class="tab_ul">
+            </ul>
+        </section>
+        <!--放大镜-->
+        <i class="icon"></i>
+        <!--商品详情-->
+        <section class="wares_box">
+            <ul id="wares_ul">
+                <!--<li>-->
+                    <!--<div class="wares_left">-->
+                        <!--<img src="images/haitao.png" alt="" class="wares_img"/>-->
+                    <!--</div>-->
+                    <!--<div class="wares_right">-->
+                        <!--<span>视的富士康较好的富士康的发挥科技</span>-->
+                        <!--<div class="right_price">-->
+                            <!--<em>￥</em>-->
+                            <!--0-->
+                            <!--<del>￥0</del>-->
+                        <!--</div>-->
+                        <!--<div class="right_juan">-->
+                            <!--<i>-->
+                                <!--<em style="width: 1%"></em>-->
+                                <!--<span>1%</span>-->
+                            <!--</i>-->
+                            <!--<b>已经领82张</b>-->
+                        <!--</div>-->
+                        <!--<div class="right_bottom">-->
+                            <!--<div class="right_xd">-->
+                                <!--<a href="#">点此领取15元优惠券</a>-->
+                            <!--</div>-->
+                            <!--<div class="right_href">-->
+                                <!--<a href="#">下单链接</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </section>
+        <!--尾部-->
+        <div class="all_pag_foot">
+            <div class="foot_top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="#top">返回顶部<img src="images/top.png"/></a>
+            </div>
+            <div class="foot_bottom">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/html" id="tab">
+    {{each result as value}}
+    <li class="tab_li" id={{value.titleId}}>{{value.title}}</li>
+    {{/each}}
+</script>
+<script type="text/html" id="wares">
+    {{each result as value}}
+    <li>
+        <div class="wares_left">
+            {{#value.productImg}}
+        </div>
+        <div class="wares_right">
+            {{#value.productName}}
+            <div class="right_price">
+               {{#value.productPrice}}
+            </div>
+            {{#value.productCouponRemain}}
+            <!--<div class="right_juan">-->
+                <!--<i>-->
+                    <!--<em style="width: 1%"></em>-->
+                    <!--<span>1%</span>-->
+                <!--</i>-->
+                <!--<b>已经领82张</b>-->
+            <!--</div>-->
+            <div class="right_bottom">
+                <div class="right_xd">
+                    {{#value.productCoupon}}
+                </div>
+                <div class="right_href">
+                    {{#value.productHref}}
+                </div>
+            </div>
+
+        </div>
+    </li>
+    {{/each}}
+</script>

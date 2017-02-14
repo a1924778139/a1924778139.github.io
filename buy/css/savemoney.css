@@ -1,0 +1,177 @@
+.m_color {
+    color: #FF841D;
+}
+
+.sm_layout {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/*头部通栏*/
+header {
+    height: 44px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #FF841D;
+}
+header .arrow {
+    width: 44px;
+    height: 44px;
+}
+header .glyphicon {
+    color: #fff;
+    font-size: 17px;
+    line-height: 44px;
+}
+header .downloadApp {
+    height: 44px;
+    width: 44px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+header .downloadApp img {
+    width: 34px;
+    height: 34px;
+}
+
+header h3 {
+    font-size: 20px;
+    line-height: 44px;
+}
+
+/*商品信息*/
+.productBox li {
+    padding: 10px;
+}
+
+.productBox li a {
+    display: block;
+}
+
+.productBox li a img {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.productBox li a .box {
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.productBox li a .box p {
+    font-size: 15px;
+    line-height: 19px;
+    min-height: 57px;
+    overflow: hidden;
+
+}
+
+.productBox li a .info {
+    margin-top: 8px;
+}
+
+.productBox li a .info span {
+    color: #a1a1a1;
+    font-size: 12px;
+    margin:0 2px;
+}
+
+/*翻页*/
+.page {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page .before,
+.page .next {
+    display: inline-block;
+    background-color: #d4d4d4;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+    border-bottom: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 20px;
+    margin: 0 30px;
+
+}
+
+.page #selectPage {
+    width: 75px;
+    height: 32px;
+    border: 1px solid #bababa;
+    font-size: 16px;
+}
+
+/*菜单*/
+.menu {
+    height: 38px;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+/*底部*/
+.all_pag_foot {
+    background-color: #efefef;
+    color: #666;
+}
+
+.all_pag_foot .foot_top {
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 10px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.all_pag_foot .foot_top a {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.foot_top a:nth-child(2) {
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+
+.foot_top a:nth-child(3) img {
+    vertical-align: middle;
+    width: 15px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+.foot_bottom {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.foot_bottom p a:nth-child(1) {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

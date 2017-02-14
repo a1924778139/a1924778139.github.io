@@ -1,0 +1,139 @@
+.message {
+  width: 100%;
+  margin: 8px 0;
+  background-color: #f2f2f2;
+}
+.message p {
+  width: 100%;
+  display: inline-block;
+  padding: 3px 0px;
+  text-align: center;
+  line-height: 20px;
+}
+.kfc_bgbox {
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.kfc_bgbox .kfc_box {
+  height: 160px;
+  border-bottom: 1px solid #ccc;
+}
+.kfc_bgbox .kfc_box a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.kfc_bgbox .kfc_box .li_box {
+  overflow: hidden;
+  padding-top: 5px;
+  position: relative;
+}
+.kfc_bgbox .kfc_box .kfx_box_img {
+  max-width: 100px;
+  width: 100px;
+  float: left;
+}
+.kfc_bgbox .kfc_box .kfx_box_img img {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  background-color: pink;
+}
+.kfc_bgbox .kfc_box .kfc_box_details {
+  margin-left: 10px;
+  float: left;
+  width: 60%;
+}
+.kfc_bgbox .kfc_box .kfc_box_details span {
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 400;
+}
+.kfc_bgbox .kfc_box .kfc_box_price {
+  float: left;
+  margin-left: 100px;
+  width: 100%;
+}
+.kfc_bgbox .kfc_box .kfc_box_price p {
+  font-size: 30px;
+}
+.kfc_bgbox .kfc_box .kfc_box_date {
+  float: left;
+  margin-left: 114px;
+}
+.kfc_bgbox .kfc_box .kfc_box_date P {
+  color: #e70;
+  font-size: 12px;
+}
+.kfc_bgbox .kfc_box .img_svg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  margin-top: -15px;
+}
+body {
+  position: relative;
+}
+.blur_bgbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.blur_bgbox .blur_box {
+  height: 250px;
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.blur_bgbox .blur_box .arr_left,
+.blur_bgbox .blur_box .arr_right {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  margin-top: -10px;
+}
+.blur_bgbox .blur_box .arr_right {
+  right: 0;
+  top: 40%;
+}
+.blur_bgbox .blur_box .arr_left {
+  left: 0;
+  top: 40%;
+  transform: rotate(180deg);
+}
+.blur_bgbox .blur_box .img_box {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  text-align: center;
+}
+.blur_bgbox .blur_box .img_box img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+}
+.blur_bgbox .blur_box i a {
+  width: 5px;
+  height: 5px;
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  top: -14px;
+  color: red;
+}
