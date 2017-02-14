@@ -1,0 +1,306 @@
+.bottom_icon{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  animation: icon_top 1s linear infinite;
+  .bottom_icon_left{
+    display: inline-block;
+    width: .7rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: .3rem;
+    transform: rotate(45deg);
+  }
+  .bottom_icon_right{
+    display: inline-block;
+    width: .7rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: .3rem;
+    transform: rotate(-45deg);
+  }
+}
+html{
+  font-size: 10px;
+}
+.music_icon{
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 200;
+  width: 3rem;
+  height: 3rem;
+  background: url("../images/1-6.svg");
+  background-size:3rem  3rem;
+  animation: rotate2 1.5s linear infinite
+}
+.yx_happy{
+  width: 100%;
+  height: 590px;
+  overflow: hidden;
+  position: relative;
+  max-width: 600px;
+  min-width: 320px;
+.happy_first{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  .bgimg_first{
+    width: 100%;
+    height: 100%;
+  }
+  .first_center_rotate{
+    position: absolute;
+    width: 24.4rem;
+    height: 24.1rem;
+    left: 50%;
+    margin-left: -12.2rem;
+    top: 11rem;
+    animation: rotate1 13s linear infinite;
+  }
+  .first_center_company_name{
+    width: 9.5rem;
+    height: 12.3rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -4.75rem;
+    top: 16rem;
+  }
+  .first_left_flash{
+    width: 17.8rem;
+    height: 3.2rem;
+    position: absolute;
+    left: 3rem;
+    top: 20rem;
+    animation: flash1 2s linear infinite;
+  }
+  .company_blessing{
+    position: absolute;
+    display: inline-block;
+    width: 27rem;
+    text-align: center;
+    top: 36rem;
+    left: 50%;
+    font-size: 2.7rem;
+    margin-left: -13.5rem;
+    color: rgb(255, 255, 255);
+    //font-size: 27px;
+
+  }
+  .happyToYou{
+    width: 2.9rem;
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -8.45rem;
+    top: 40rem;
+  }
+  .yxj{
+    width: 7.6rem;
+    height: 7.6rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.8rem;
+    top: 40rem;
+  }
+  .first_happy{
+    width: 2.9rem;
+    height: 7rem;
+    position: absolute;
+    left:50% ;
+    margin-left: 6.55rem;
+    top: 39.5rem;
+    animation: translate1 1.5s linear infinite
+  }
+
+}
+.happy_second{
+  position: relative;
+  width:100%;
+  height: 100%;
+  .bgimg_second{
+    width: 100%;
+    height: 100%;
+  }
+  .second_left_as{
+    position: absolute;
+    width: 290px;
+    height: 70px;
+    left: -30px;
+    top: 250px;
+  }
+  .second_left_rotate{
+    position: absolute;
+    left: 20px;
+    bottom: 120px;
+    animation: rotate3 1s infinite linear;
+  }
+  .secong_right_gif{
+    position: absolute;
+    width: 158px;
+    height: 154px;
+    right: 0px;
+    bottom: 80px;
+  }
+  .second_bottom_img{
+    position: absolute;
+    right: 50%;
+    margin-right: -153px;
+    bottom: 30px;
+  }
+}
+  .happy_third{
+    width: 100%;
+    height:100% ;
+    position: relative;
+    .bgimg_third{
+      width: 100%;
+      height: 100%;
+    }
+    .lion{
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -150px;
+      z-index: 1;
+    }
+    .distich{
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      margin-left: -91px;
+      z-index: 0;
+    }
+    .ask{
+      position: absolute;
+      margin-left: -45px;
+      left: 50%;
+      top: 280px;
+    }
+    .ask_click{
+      position: absolute;
+      margin-left: -55px;
+      left: 50%;
+      top: 415px;
+    }
+  }
+  .happy_four{
+    width: 100%;
+    height:100% ;
+    position: relative;
+    .bgimg_four{
+      width: 100%;
+      height: 100%;
+    }
+    .company{
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      margin: 0 0 0 -99px;
+    }
+    h1{
+      color:white;
+      position: absolute;
+      top: 415px;
+      left: 50%;
+      margin-left: -63px;
+    }
+    span{
+      position: absolute;
+      top: 450px;
+      left: 50%;
+      margin-left: -137px;
+      font-size: 30px;
+      color:white;
+    }
+  }
+}
+
+.scale{
+  animation: scale1 linear 1s;
+}
+//第一页中心旋转
+@keyframes rotate1{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+//第一页闪光
+@keyframes flash1{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+//第一页左下角动画
+@keyframes  translate1{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+
+  }
+  100%{
+    transform: translate(-20px);
+    opacity: 0;
+  }
+}
+//音乐图标旋转
+@keyframes  rotate2{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+//底部向上箭头
+@keyframes icon_top {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    transform:  translate(0,-10px);
+    opacity: 1;
+  }
+}
+//第二页进入缩放
+@keyframes scale1 {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+//第二页灯笼旋转
+@keyframes rotate3 {
+  0%{
+    transform: rotate(0deg)
+  }
+  25%{
+    transform: rotate(15deg)
+  }
+  50%{
+    transform: rotate(0deg)
+  }
+  75%{
+    transform: rotate(-15deg)
+  }
+  100%{
+    transform: rotate(0deg)
+  }
+}
